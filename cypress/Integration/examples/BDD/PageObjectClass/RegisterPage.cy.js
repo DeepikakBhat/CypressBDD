@@ -1,133 +1,140 @@
 class RegisterPage
 {
-    registerLink = '.ico-register';
-    radiobutton = '#gender-female';
-    firstname = "#FirstName";
-    lastname = '#LastName';
-    day = "select[name='DateOfBirthDay']";
-    month = "select[name='DateOfBirthMonth']";
-    year = "select[name='DateOfBirthYear']";
-    email = '#Email';
-    company = '#Company';
-    password = '#Password';
-    confirmpassword = '#ConfirmPassword';
-    registerbtn = '#register-button';
-    message = 'div.result';
-    continue = 'a.button-1';
+    Logo = "img[alt='Imagility Logo']"
+    registerlink = "a[href='/login/registerImmigrantType']";
 
-    loadtheURL()
+    validateLogo()
+        {
+            cy.get(this.Logo).should("exist")
+
+        }
+    LoadUrl()
     {
-        cy.visit('https://demo.nopcommerce.com/')
+        cy.visit("https://demo.imagility.co/")
     }
 
     Clickonregister()
     {
-        return cy.get(this.registerLink).click()
+        cy.get(this.registerlink).click()
     }
 
-    CheckRadioButton()
+    ClickOnRadioBtn(For)
     {
-        return cy.get(this.radiobutton).click()
+        
+        cy.xpath(`(//label[@for="${For}"]//parent::div//div[@class='p-radiobutton p-component'])`).should('be.visible').screenshot().click()
 
+    }
+
+    ClickProceed()
+    {
+        cy.get('.p-button-label').click()
+    }
+
+    
+    SelectTitle(Title)
+    {    
+        cy.wait(1000)
+        cy.xpath("//label[contains(text(),'Title')]//parent::div//div[@role='button']").click()
+        cy.xpath(`//p-dropdownitem[@class='ng-tns-c75-0 ng-star-inserted']//div[contains(text(),'${Title}')]`).scrollIntoView().click('topRight', { force: true })
     }
 
     EnterFirstName(value)
     {
-        cy.get(this.firstname).type(value)
-        return this
-
+        cy.get("input[placeholder='First Name']").type(value)
     }
 
-    EnterlastName(value)
+    EnterMiddleName(value)
     {
-        cy.get(this.lastname).type(value)
-        return this
+        cy.get("input[placeholder='Middle Name']").type(value)
     }
 
-    EnterDay(value)
+    EnterLastName(value)
     {
-        cy.get(this.day).select(value)
-        return this
-
+        cy.get("input[placeholder='Last Name']").type(value)
     }
 
-    EnterMonth(value)
+    SelctCountry(value)
     {
-        cy.get(this.month).select(value)
-        return this
+        //country drop down
+        cy.get('.registrations-dropdown > .p-dropdown-label').click()
+        cy.get('.p-dropdown-header.ng-tns-c75-1.ng-star-inserted').type(value)
+        cy.get('p-dropdownitem:nth-child(2) > li:nth-child(1) > div:nth-child(1)').click()
     }
 
-    EnterYear(value)
-    {
-        cy.get(this.year).select(value)
-        return this
-    }
-        
-    EnterEmail(value)
-    {
-        cy.get(this.email).type(value)
-        return this
+    EnterPhoneNumber(value)
+    {  
+        cy.get("input[placeholder='Phone Number']").type(value)
     }
 
-    EnterCompanyName(value)
+
+    EnterUserID(value)
     {
-        cy.get(this.company).type(value)
-        return this
+        //capture userid and store it in a value
+        cy.get('input[formcontrolname="userId"').clear().type(value)
     }
 
     EnterPassword(value)
     {
-        cy.get(this.password).type(value)
-        return this
-    }
-
-    EnterConfirmPassword(value)
-    {
-        cy.get(this.confirmpassword).type(value)
-        return this
-    }
-
-    ClickOnRegisterBtn()
-    {
-       return  cy.get(this.registerbtn).click()
+        cy.get("input[placeholder='Password']").type(value)
     }
     
+<<<<<<< HEAD
     verfiySuccessMessage()
     { 
        
         return cy.get(this.message).should('have.text','Your registration completed')
-    }
-
-    ScreenshotOfSuccessMsg()
+=======
+    EnterConfirmPassword(value)
     {
-        return cy.get(this.message).screenshot('registrationsuccessmessage')
+        cy.get("input[placeholder='Confirm Password']").type(value)
+>>>>>>> 1ff660d3f116d5e77d22afce6285eac70b4b75b0
     }
 
-    ClickOnContinue()
+    AcceptTermsandCondition()
     {
-        return cy.get(this.continue).click()
+        cy.get('.mat-checkbox-inner-container').click()
     }
 
-    VerifyInvalidEmail()
+    ClickNext()
     {
-        return cy.get('#Email-error').should('have.text' , 'Wrong email')
+
+        cy.get('.p-button-label').click()
+
     }
 
-    VerifyInvalidPassword()
+    clickRadioButton()
     {
-        return cy.get('#ConfirmPassword-error').should('have.text' , 'The password and confirmation password do not match.')
+        cy.get("p-radiobutton[value='0'] div[class='p-radiobutton-box']").click()
+
     }
 
-    ValidateMandatoryerrormessage()
+   
+
+    ClickOnVerify()
     {
-    cy.get('#FirstName-error').should('have.text' , 'First name is required.')
-      cy.get('#LastName-error').should('have.text', 'Last name is required.')
-      cy.get('#Email-error').should('have.text' , 'Email is required.')
-      cy.get('#Password-error').should('have.text' , 'Password is required.')
-      cy.get('#ConfirmPassword-error').should('have.text' , 'Password is required.')
+
+        cy.wait(10000)
+        cy.get("input[value='Verify']").click()
+    }
+
+    VerifySuccessMessage()
+    {
+        
     }
 
 
-}
+
+       /* cy.on('window:confirm',(t) =>
+        {
+            expect(t).to.contains('Save address')
+        })
+
+        */
+    }
+
+
+
+    
+
 
 export default RegisterPage

@@ -1,62 +1,67 @@
+import { toUpper } from "lodash"
+import { toLower } from "lodash"
+
 class LoginPage
-{
-    pagetitle = "div[class='page-title']";
-    btn='.ico-login';
-    emailid= "input[name='Email']";
-    password="input[name='Password']";
-    loginbtn= "button[class='button-1 login-button']";
+{ 
+
+    Username = '#username'
+    Password= '#password'
+    SignInButton = 'button.signin'
+    Privacy = '.mat-focus-indicator.btn.btn-primary'
+    Title = "//div[@class='user-name']"
+    UsernameValidation = "h6[class='card-sub-title mb-3']"
 
     
+<<<<<<< HEAD
     loadtheURL()
     {
         cy.visit('https://demo.nopcommerce.com/')
         cy.wait(10000)
     }
+=======
+>>>>>>> 1ff660d3f116d5e77d22afce6285eac70b4b75b0
 
-    ClickLogin()
+    EnterUserName(value)
     {
-        cy.get(this.btn).click()
-    }
-
-    ValidatePageTitle()
-    {
-        cy.get(this.pagetitle).should('have.text', 'Welcome, Please Sign In!')
-    }
-    EnterEmailid(value)
-    {
-       const email = cy.get(this.emailid)
-       email.type(value)
+        cy.get(this.Username).type(value)
     }
 
     EnterPassword(value)
     {
-        cy.get(this.password).type(value)
+        cy.get(this.Password).type(value)
     }
 
-    ClickLoginButton()
+    ClickonLogin()
     {
-        cy.get(this.loginbtn).click()
+        cy.get(this.SignInButton).click()
     }
 
-    EmailErrorMessage()
+    ClickOnPrivacy()
+    {
+        cy.get(this.Privacy).should('be.visible').click()
+    }
+
+    VerifypromtMsg()
     {
         
-        const wrongemail  = cy.get('#Email-error')
-        wrongemail.should('have.text', 'Wrong email')
-        const email = cy.get(this.emailid)
-        email.clear()
-        //return wrongemail
+        cy.on('window:alert', (text) => 
+        {
+            expect(text).to.contains('Welcome!');
+        })
 
+        cy.get('.mat-icon').click()
     }
 
-    EmailPasswordErrorMessage()
+    VerifyTitle(value)
     {
-        //cy.get('.message-error.validation-summary-errors').should('have.text', 'Login was unsuccessful. Please correct the errors and try again.')
-        cy.get('.message-error.validation-summary-errors').should('have.text','Login was unsuccessful. Please correct the errors and try again.The credentials provided are incorrect\n')
+        cy.wait(5000)
+        cy.xpath(this.Title).contains(value ).screenshot()
     }
 
-
-
+    VerifyUserName(value)
+    {
+        cy.get(this.UsernameValidation).should('have.text' , value).screenshot()
+    }
 
 }
 

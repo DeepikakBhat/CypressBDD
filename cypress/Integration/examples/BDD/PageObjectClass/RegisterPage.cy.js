@@ -93,8 +93,8 @@ class RegisterPage
     }
     
     verfiySuccessMessage()
-    {
-
+    { 
+       
         return cy.get(this.message).should('have.text','Your registration completed')
     }
 

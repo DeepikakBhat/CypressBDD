@@ -10,6 +10,7 @@ class LoginPage
     loadtheURL()
     {
         cy.visit('https://demo.nopcommerce.com/')
+        cy.wait(10000)
     }
 
     ClickLogin()

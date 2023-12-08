@@ -1,0 +1,23 @@
+{
+    "firstname": "john",
+    "lastname": "cena",
+    "day" : "25",
+    "month" : "January",
+    "year" : "1988",
+    "email" : "johncena88@gmail.com",
+    "company" : "compsakshath",
+    "password" : "John@123",
+    "country" : "India",
+    "state" : "Other",
+    "city" : "bangalore",
+    "address" : "jayanaga 1st block",
+    "zipcode" : "560078",
+    "phonenumber" : "7788996678",
+    "productname" : ["HTC","Nokia"],
+    "invalidemail" : "john123",
+    "invalidpassword" : "9999",
+    "HomePageMenus" : ["Computers" , "Electronics" , "Apparel" , "Digital downloads" , "Books" , "Jewelry" , "Gift Cards"]
+
+
+
+}

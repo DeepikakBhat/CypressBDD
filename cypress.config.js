@@ -13,13 +13,14 @@ async function setupNodeEvents(on, config) {
 }
 
 
-
 module.exports = defineConfig({
   e2e: {
 
-
-    specPattern: "**/*.feature",
-    supportFile: false,
+    defaultCommandTimeout:8000,
+    pageLoadTimeout:7000,
+    viewportWidth: 1500,
+    viewportHeight: 900,
+    specPattern: "cypress/integration/examples/BDD/nop/nop.feature",
     setupNodeEvents,
          
     

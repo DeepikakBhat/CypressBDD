@@ -1,0 +1,346 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "end-to-end-testing-on-nopcommerce-site;register-the-new-user",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Register the new user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open NOPeCommerce page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2164000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstname",
+                      "lastname",
+                      "day",
+                      "month",
+                      "year",
+                      "email",
+                      "company",
+                      "password",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "john",
+                      "cena",
+                      "25",
+                      "January",
+                      "1988",
+                      "johncena27@gmail.com",
+                      "company",
+                      "JOHNcen@4455",
+                      "JOHNcen@4455"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I enter all the mandatory fields in registration page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4190000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "New user is registered successfully",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2120000000
+            },
+            "embeddings": [
+              {
+                "data": "iVBORw0KGgoAAAANSUhEUgAABGoAAABOCAYAAAB4xfA1AAAMpklEQVR4Ae3BMWjbZ+KA4fd+BAwpgXj4UCnS0iCQNSggbvGBUQaBByFDRw3dPGjSFE9Gk/HkTpo0eMugsSCjwaChxlAvfwTRIAtEu1gcNd/gQEjB0/1dy0mT1O0lbe/ul/R9nr/96wqSJEmSJEn6n0uQJEmSJElSKiRIkiRJkiQpFRIkSZIkSZKUCgmSJEmSJElKhQRJkiRJkiSlQoIkSZIkSZJSIUGSJEmSJEmpkCBJkiRJkqRUSJAkSZIkSVIqJEiSJEmSJCkVEiRJkiRJkpQKCZIkSZIkSUqFBEmSJEmSJKVCgiRJkiRJklIhQZIkSZIkSamQIEmSJEmSpFRIkCRJkiRJUiokSJIkSZIkKRUSJEmSJEmSlAoJkiRJkiRJSoUESZIkSZIkpUKCJEmSJEmSUiFBkiRJkiRJqZAgSZIkSZKkVEiQJEmSJElSKiRIkiRJkiQpFRIkSZIkSZKUCgmSJEmSJElKhQRJkiRJkiSlQoIkSZIkSZJSIUGSJEmSJEmpkCBJkj4ikcFhm3q/wyByq/Fxm3q/wyDykZjQ7bfpznhn4+MOg8ifYEL38Ihzbsx61Ps9xvyFzXrU+z3GvId4xNbxhD9s1qPe7zCISJL0wUqQJEkfkUBtvUGNSHd0xDlvmfXYvoDaSota4CNRpLmxQzPPu5n12L7gTzE+7jHgNfkGBxsNSujdRQajIVMkSdJPEiRJ0kemSHOlCJdDvhpFfhYZfD+BpSpf5JEkSVIK3UGSJH188g12f2izPR8yLjcoAeejHt3LQHO1QoaF81GHzXnkpUK2xV45sBAZHHb4JrTYKwdeGh+32f6xyv56hQyRwWGHs1Dlu/mQKVBb2aGZ5y0Tuv0huWygO58AgeZqi1qA81GHzXnkpdrKDs08bxgft9m+YGGpSvPukO6PVfbXK2SY0O33YGWHZp4rkcFhh+4lr9RWdmjm4XzUYXMe+Un3pM032RZ75Ui3PySXDXTnEyDQXG1RC8CsR/10ws8CzdUWtRAZHHboXnJlyGb/Kc3VFrVnPeqnsLvRoMTC+ajD5jzyUiHbYq8cWIgMDjt8Exo8ij26lywsVdlfr5DhN8Qjtk6GTLmxVGV/vUKGG/GIrZMhU24sVdlfr5BhYXzcZpsGu/TYvuBGkd2NBhy32b5gYbnBwVqRn5yPOmzGh+yGp2zPIwtFdjcalPh156MOm/PIS7WVHZp5rkzo9nsMuHLZo94vsrvRoMSVeMTWyZApN5YbHKwVecOsR/10wkKgmQ1IkvShu4MkSfooldYa1Po9to8nHBQiX80jhWyLWuDa+LjN9kWgubpDLQDxiK2TDlu02CsH3sdg/pTm6g57gd8Q6c4Duxs7lFg4H3XYnENzdYdaAOIRWydttp632CsHfjI+brP9Y5X9jQoZYHzcZvsCWOIWkcFhh+7dBgfrRa7NetRPO+Tut6iVWxzc61E/jTRXW9QCVyIQ6c4Duxs7lLgx61E/jTRXd6gFro2P22yf9MhtNKit75A7brP9Y5X99QoZrjzjDePjNtsXgebqDrUAxCO2Tjps0WKvHHhpOu/xYGWHgzwQj9g6GfLVqMheOXCrWY/66YTayg57ea6Nj9tsHsL+eoXMrEf9dEIh2+KgHIDI4LDD5iHsr1fIcOOix5Nsi4O1APGIrZMh2/02hWyLg7UA8Yitkx5boxZ75cC1yyHbscr+RoUMMD5us93vsbvRoMQvnY86bM6hubpDLQDxiK2TNlvPW+yVizQ3WuQOO3TvNjhYK3ItHrF1MoRsi4NyACKDww71wyr76xUyXJn1qJ9OqK3s0MwD8YitkyEQkCTpQ5YgSZI+UkWaK0W46FE/GTJdqvK4HLgWj3hyAbWVFrXAQqjwOBuYzoeMeU/LVWqBf6uQrVLipQlfzyOFbINaYCFUeJwNTOdDxlyJRzy5CDTLFTIslNYa1Pg1kbNLKHwSeCXf4GCjRS3wmwrZKiV+Nv5hAstVaoFXSp8WgchZ5N+LRzy5gNpKi1pgIVR4nA1M50PGvGa5QTPPQqjw5TJM44Rzbjf+YQLLDZp5Ximt7XCwXiFDZPD9BJYb7JUDC4FauUrhcsjXM15T5Mty4Foo8mgJWKryuBy4Foo8WoLpi8jPAs1yhQwLpbUGNSY8GUV+acLX80gh26AWWAgVHmcD0/mQMbcbT4dMl6o8LgcWArVylcLlkK9nXIkMvp/AcoNmnoVQ4XE2IEnShy5BkiR9vPJVmktcCTTLFTLcePZPpgRy93lDJveQAhO+nfFeCp8E3sWDe4FXZk8ZEHiUC7wuk3tIgchZhPOzp0wJ5AKvKfKPZX5FkX8sw3TeoX54xDnv7sG9wOtKazscrBX5yfi4Tb3fpn464Z09+ydTArn7vCGTe0iBCd/OeKXwSeDdTfj2AgqfBG4XObuEwieBN4Qij5Zg8MOEV5Y+I8NLgdxd4G4gw29YesjfA68p8o9lmL6I/MLsKQMCj3KB12VyDykQOYvcYsK3F1AIRTK8JhR5tATfPY9A5OwSap8WeV3mXkCSpA/dHSRJ0kcs8PcQYB7IBd4SyAX+xyLdkzZd3hZ4xO9TWtthf9Rhcz5ksz/k2nKDg7Ui72XWo346YSHQXG1Re9ajfhp5d4Fc4D/iwb3Ab3lwL5AOke5Jmy5vCzzi103nHepzfqHAlRj5DnjAW+5/RoGIJEkfsjtIkqS/qMhZhFLgLYHcff5LAs3VFrXArc7P+F0y5RYHZa6djzpszntsjVrslQPvJjL4fgLLDQ7WirzyjPcUOYtQCrwlkLvPH/Ld8wgEfs13zyMQeFvhk8CfK3L2I3CXXxForraoBd5LIdtirxy4XeABt3j2T6bAIyRJ+nAlSJKkv577n1EgcvaMN5yfPWVKIBd4Zfoi8rPI2Y/8Oe5/RoHI2TPeNOtR7/cYA5ncQwpEziKvmfDtBe8sU26xuwzTF5F3Fzm7hNqnRV43/mHCO7v/GQUiZ894w/nZU6YEcoHfKZBbgumLyO0CuSWYvoi8IU745hIe3Av8IZdP+b/IayJnl1D7tMgv3P+MApGzZ7xp1qPe7zHmNoHcEkxfRN40odtv051xJZBbgsEPE153/jwiSdKHLkGSJP31hApfLsPgtMMgshCP+GoeKWSrlPhJIHcXuHjKmIXzUY/uJX+OUOFxNjA47TCI3JjQPZ1QyFYpcSVU+HI50h0dcc7C+LjHgCt3AxneNqHbb7M1irwSj3hyAbVPi7y7QG4JBt8fcc6NWY/tC65Ezp7x74UKXy7D4LTDILIQj/hqHilkq5T4vQK1z4tw0aM745XzUYd6v8eYQO3zIlz02BpFFiKD0ZDpUpUv8vxBke7oiHMWxsc9BktVvsjzS6HC42xgcNphELkxoXs6oZCtUuI2gVq5SuGix9Yo8tL4uMdgqcoXea4Eap8X4aJHd8ZCPOKreUSSpA/dHSRJ0l9SaW2H/VGHzZM2XRZqKzs087xSWmvRPOyw3W9zbbnBfnbIZuRPkSm32KfD5kmbLguFbIu9cuCl0toOu8dtNvtDri032F3usc1tijQ3GnT7HepzXilkWzTzLOSrNL/v0D1p011ucLDGLQK19QZn/R6b/SELRXZXqzw5GfLd8wgESoUqhZMhm/0htZUdmryptLbD/qjD5kmbLgu1lR2aef6YfIOD+0dsnbSpn3KjyO5GgxJX8g0O7h+xddKhPmdhucHBWpE/rkgzPGWzP+TaUpX99QoZbpcpt9inw+ZJmy4LhWyLvXJgIVD7vEj3tEe9H2iutqiFCnursHXSoT5nYanK/nqFDDfyDQ7oUT9tMzjlSqCZLTKdRyRJ+pD97V9XkCRJ+mBEBocdvgkt9soB/fecjzpszgO7Gw1KSJKk/4QESZKktJr1qPfbdGf8bDakexl4lAtIkiR9bO4gSZKUVvkG+887bJ62GZxyI9BcbVELSJIkfXTuIEmSlGKZcouDMkqBTLnFQRlJkvQflCBJkiRJkqRUSJAkSZIkSVIqJEiSJEmSJCkVEiRJkiRJkpQKCZIkSZIkSUqFBEmSJEmSJKVCgiRJkiRJklIhQZIkSZIkSamQIEmSJEmSpFRIkCRJkiRJUiokSJIkSZIkKRUSJEmSJEmSlAoJkiRJkiRJSoUESZIkSZIkpUKCJEmSJEmSUiFBkiRJkiRJqZAgSZIkSZKkVEiQJEmSJElSKiRIkiRJkiQpFRIkSZIkSZKUCgmSJEmSJElKhQRJkiRJkiSlQoIkSZIkSZJSIUGSJEmSJEmpkCBJkiRJkqRUSJAkSZIkSVIqJEiSJEmSJCkVEiRJkiRJkpQKCZIkSZIkSUqFBEmSJEmSJKXC/wN09uod0Z9KXwAAAABJRU5ErkJggg==",
+                "mime_type": "image/png"
+              }
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "end-to-end-testing-on-nopcommerce-site;login-to-nopcommere-application",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Login to nopcommere application",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I open NOPeCommerce page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 511000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "emailid",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "johncena27@gmail.com",
+                      "JOHNcen@4455"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 17,
+            "name": "Userid and password is entered and clicked on login button",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1334000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "Login is successfull and title is verified",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1829000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "end-to-end-testing-on-nopcommerce-site;add-the-address-of-the-new-user-created",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Add the address of the new user created",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3957000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I Open address page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1824000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "country",
+                      "state",
+                      "city",
+                      "address",
+                      "zipcode",
+                      "phonenumber"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "India",
+                      "Other",
+                      "bangalore",
+                      "jayanaga 1st block",
+                      "560078",
+                      "7788996678"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I enter all mandatory details in address page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3827000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "address is created successfully",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2908000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 23
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "end-to-end-testing-on-nopcommerce-site;add-the-cellphone-to-cart,validate-the-totoal-amount-in-cart-page-and-check-out-the-item",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Add the cellphone to cart,validate the totoal amount in cart page and check out the item",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2771000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "I open electronics page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 781000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "HTC"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Nokia"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I add cellphones to cart",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10219000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I veriry the total amount calculated is correct",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6017000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "Checkout the items from cart",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6689000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 33
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "end-to-end-testing-on-nopcommerce-site",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "End to end testing on NOPCommerce site",
+    "tags": [],
+    "uri": "cypress\\integration\\examples\\BDD\\nop\\nop.feature"
+  }
+]
